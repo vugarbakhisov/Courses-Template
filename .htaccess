@@ -1,0 +1,22 @@
+﻿RewriteEngine on
+
+#Options -Indexes
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+
+#ErrorDocument 404 https://www.yuptech.az
+#ErrorDocument 403 https://www.yuptech.az
+
+
+
+
+
+RewriteRule ^kateqoriya-([0-9a-zA-Z-_]+)-([0-9]+)$   yemek-etrafli.php?yup=$1&kateqori_id=$2 [L,QSA]
+
+
